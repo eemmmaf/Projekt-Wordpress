@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #FFF6F8;
+}
+
+header {
+    background-color: #372C2E;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Navigering*/
+.desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+nav {
+    background-color: #372C2E;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+h1 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.0rem;
+}
+
+h2 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.4rem;
+}
+
+h3 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.8rem;
+}
+
+h4 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.4rem;
+}
+
+h5 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+}
+
+h6 {
+    color: #372C2E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+
+p {
+    color: #372C2E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+li {
+    color: #372C2E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+nav a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+.current-menu-item {
+    border-bottom: 3px solid #DFB753;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.desktop-nav ul {
+    position: absolute;
+    top: 2rem;
+    right: 2%;
+}
+
+.desktop-nav li {
+    display: inline;
+    margin: 1rem;
+    padding: 0.3rem 2rem;
+}
+
+.header img {
+    width: 100%;
+}
+
+a {
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+button,
+#evf-submit-70 {
+    background-color: #DFB753;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Restaurang*/
+
+.page,
+.page-info {
+    max-width: 1200px;
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.page-breadcrumbs {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.breakfast-section {
+    margin-top: 8rem;
+    background-color: #DFB753;
+}
+
+.big-image {
+    width: 100%;
+}
+
+#evf-70-field_3WNV27e5Ba-16,
+#evf-113-field_kj03HNsCiW-6 {
+    display: none;
+}
+
+/*Breadcrumbs*/
+.breadcrumbs li ::marker {
+    color: white;
+}
+
+.breadcrumbs {
+    list-style-type: none;
+    padding: 0;
+}
+
+.breadcrumbs li,
+.breadcrumbs a {
+    font-size: 1.8rem;
+    color: #372C2E;
+    font-family: 'Roboto', sans-serif;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-p {
+    max-width: 550px;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.flex-breakfast {
+    max-width: 550px;
+    width: 100%;
+    padding-left: 4rem;
+}
+
+.flex-container a,
+.flex-room-container a,
+.spa-section a {
+    padding: 0.5rem 1rem;
+    border: 4px solid #DFB753;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    background-color: #372C2E;
+    color: white;
+    text-decoration: none;
+}
+
+/*Hotell*/
+
+.thumbnail-big img {
+    width: 100%;
+}
+
+.flex-room-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.room-text {
+    max-width: 600px;
+    width: 100%;
+    margin-left: 3rem;
+}
+
+.room-text h3 {
+    margin-top: 0;
+}
+
+.flex-room-container li {
+    margin-top: 1rem;
+}
+
+.flex-room-container a {
+    margin-top: 2rem;
+    float: right;
+}
+
+.room-section article {
+    margin-top: 3rem;
+    border-bottom: 0.5px solid #372C2E;
+}
+
+/*Footer*/
+footer {
+    margin-top: 5rem;
+    background-color: #372C2E;
+}
+
+footer h2 {
+    color: white;
+    font-size: 2.8rem;
+}
+
+footer p {
+    color: white;
+}
+
+footer li {
+    margin-top: 2rem;
+}
+
+footer ul {
+    padding-left: 2rem;
+}
+
+.footer-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#wpforms-7-field_2 {
+    max-width: 235px;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#wpforms-submit-7 {
+    max-width: 235px;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #DFB753;
+}
+
+#wpforms-submit-7:hover {
+    background-color: #8e722d;
+    font-weight: 700;
+}
+
+footer button:hover {
+    background-color: #191815;
+    color: white;
+}
+
+footer label {
+    color: white;
+}
+
+/*Spa*/
+.spa-section {
+    max-width: 1900px;
+    width: 100%;
+}
+
+.spa-section h2 {
+    text-align: center;
+}
+
+.flex-spa {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-spa div {
+    max-width: 450px;
+    width: 100%;
+    padding: 2%;
+}
+
+/*Media quiires*/
+@media all and (max-width: 800px) {
+
+    /*Gömmer desktop-menyn*/
+    .desktop-nav {
+        display: none;
+    }
+
+    /*Hamburger-menyn*/
+    .mobile-nav {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        width: 100%;
+        z-index: 0;
+        background-color: #372C2E;
+    }
+
+    main {
+        margin-top: 5rem;
+    }
+
+    /*Ikonen för menyn*/
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        max-width: 50px;
+        border: none;
+        background-color: transparent;
+        font-size: 2.8rem;
+        color: #DFB753;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .nav-ul {
+        display: none;
+        position: relative;
+        top: 0;
+        padding-left: 0;
+        list-style-type: none;
+        background-color: #372C2E;
+    }
+
+    .nav-ul li {
+        display: block;
+        padding: 6%;
+        border-bottom: 2px solid #DFB753;
+        text-align: center;
+        font-size: 1.8rem;
+        background-color: #372C2E;
+    }
+
+    /*Klassen för länkarna i menyn när dom syns*/
+    .nav-ul.show {
+        display: block;
+        margin-top: 4rem;
+    }
+
+    .flex-container,
+    .flex-spa {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flex-spa div {
+        max-width: 500px;
+        width: 100%;
+        margin: 3rem auto;
+    }
+
+    main {
+        padding: 2rem;
+    }
+}
