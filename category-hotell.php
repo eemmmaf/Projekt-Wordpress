@@ -1,23 +1,16 @@
 <?php
 get_header();
 ?>
+
 <?php
 //Array
 $arguments = array(
-    'category_name' => 'hotellrum',
+    'category_name' => 'hotell',
 );
 
 //WP-query
 $wpquery = new WP_Query($arguments);
 ?>
-<div class="thumbnail-big">
-    <?php
-    //Kontroll för att se om det finns bild och skriver ut
-    if (has_post_thumbnail()) {
-        the_post_thumbnail('big-header');
-    } ?>
-</div>
-
 <main class="page">
     <ul class="breadcrumbs">
         <?php
@@ -28,12 +21,8 @@ $wpquery = new WP_Query($arguments);
         endif;
 ?>
 <section class="page-info">
-    <h1><?php the_title(); ?></h1>
-    <div class="flex-p">
-        <?php
-        the_content();
-        ?>
-    </div>
+    <h1><?php single_cat_title(); ?></h1>
+   <p>Här finns information om våra rum balblbal</p>
 </section>
 
 <section class="room-section">
