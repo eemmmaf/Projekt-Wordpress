@@ -1,13 +1,15 @@
-<?php 
+<?php
 get_header();
-    if ( have_posts() ) {
-        while ( have_posts() ) {
-            the_post();
-            
-echo do_shortcode('[smartslider3 slider="2"]');
-
-        } // end while
-    } // end if
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
 ?>
-<!--Här slutar huvudinnehåll och footer börjar-->
-<?php get_footer(); ?>
+        <div class="image-slider"><?php
+                                    //Skriver ut bildspelet
+                                    echo do_shortcode('[smartslider3 slider="2"]');
+                                }
+                            }
+                                    ?>
+        </div>
+        <!--Här slutar huvudinnehåll och footer börjar-->
+        <?php get_footer(); ?>
