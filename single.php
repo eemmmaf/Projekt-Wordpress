@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-<img class="big-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 <main class="page">
     <ul class="breadcrumbs">
         <?php
