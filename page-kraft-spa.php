@@ -65,7 +65,6 @@ $wpquery = new WP_Query($arguments);
         <?php
             if (is_active_sidebar('offer')) : ?>
                 <?php dynamic_sidebar('offer'); ?>
-        </ul>
     <?php
             endif;
     ?>
