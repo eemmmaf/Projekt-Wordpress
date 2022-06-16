@@ -1,11 +1,17 @@
 /*
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:44:44 
- * @Last Modified by:   Emma Forslund - emfo2102 
- * @Last Modified time: 2022-06-16 13:44:44 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-06-16 13:56:59
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+/**
+ * Generell CSS
+ *
+ *
+ */
 
 * {
     box-sizing: border-box;
@@ -34,62 +40,6 @@ main {
     margin-top: 4rem;
 }
 
-
-/*Navigering*/
-.desktop-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 1;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
-}
-
-nav {
-    background-color: #372C2E;
-}
-
-
-nav a {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: 700;
-}
-
-.current-menu-item {
-    border-bottom: 3px solid #DFB753;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-.desktop-nav ul {
-    position: absolute;
-    top: 2rem;
-    right: 2%;
-}
-
-.desktop-nav li {
-    display: inline;
-    margin: 1rem;
-    padding: 0.3rem 2rem;
-}
-
-.header img {
-    width: 100%;
-}
-
-/*Gömmer mobilens navigering för stora skärmar*/
-.mobile-nav {
-    display: none;
-}
 
 /*Rubriker*/
 h1 {
@@ -162,7 +112,74 @@ button,
     cursor: pointer;
 }
 
-/*Restaurang-sidan*/
+/**
+ * Navigering
+ *
+ * Stylar navigeringen för desktop, länkarna och gömmer hamburger-menyn
+ */
+
+.desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+nav {
+    background-color: #372C2E;
+}
+
+
+nav a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+/*Aktiv länk i menyn*/
+.current-menu-item {
+    border-bottom: 3px solid #DFB753;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.desktop-nav ul {
+    position: absolute;
+    top: 2rem;
+    right: 2%;
+}
+
+.desktop-nav li {
+    display: inline;
+    margin: 1rem;
+    padding: 0.3rem 2rem;
+}
+
+.header img {
+    width: 100%;
+}
+
+/*Gömmer mobilens navigering för stora skärmar*/
+.mobile-nav {
+    display: none;
+}
+
+/**
+ * Restaurang-sidan
+ *
+ * Bredden bestäms, sektion med gul bakgrundsfärg, klass för breadcrumbs
+ */
+
 .page,
 .page-info {
     max-width: 1200px;
@@ -190,7 +207,12 @@ button,
     display: none;
 }
 
-/*Breadcrumbs*/
+/**
+ * Breadcrumbs som används på många sidor
+ *
+ * Gömmer marker, stylar länkarna
+ */
+
 .breadcrumbs li ::marker {
     color: white;
 }
@@ -212,7 +234,12 @@ button,
     text-decoration: none;
 }
 
-/*Flex-container med space-between*/
+/**
+ * Spa-sidan
+ *
+ * Flex-container, sektion med mörk bakgrundsfärg
+ */
+
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -241,7 +268,34 @@ button,
     text-decoration: none;
 }
 
-/*Hotellrum*/
+.spa-section {
+    max-width: 1900px;
+    width: 100%;
+}
+
+.spa-section h2 {
+    text-align: center;
+}
+
+.flex-spa {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-spa div {
+    max-width: 450px;
+    width: 100%;
+    padding: 2%;
+}
+
+/**
+ * Hotellrum-sidan
+ *
+ *
+ */
+
 .thumbnail-big img {
     width: 100%;
 }
@@ -275,7 +329,12 @@ button,
     border-bottom: 0.5px solid #372C2E;
 }
 
-/* Om företaget */
+/**
+ * Om företaget-sidan
+ *
+ * Flex-container, artikel
+ */
+
 .dark-about {
     max-width: 2000px;
     width: 100%;
@@ -303,7 +362,12 @@ button,
     width: 100%;
 }
 
-/*Footer*/
+/**
+ * Footer
+ *
+ * Bakgrundsfärg, länkarna, flex-container, kontaktformulär gjort med wp-forms
+ */
+
 footer {
     margin-top: 5rem;
     background-color: #372C2E;
@@ -353,7 +417,6 @@ footer ul {
     font-weight: 700;
 }
 
-/*Footer*/
 footer button:hover {
     background-color: #191815;
     color: white;
@@ -361,29 +424,6 @@ footer button:hover {
 
 footer label {
     color: white;
-}
-
-/*Spa*/
-.spa-section {
-    max-width: 1900px;
-    width: 100%;
-}
-
-.spa-section h2 {
-    text-align: center;
-}
-
-.flex-spa {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-}
-
-.flex-spa div {
-    max-width: 450px;
-    width: 100%;
-    padding: 2%;
 }
 
 /*Media quiries för skärmar som är max 800px breda*/
