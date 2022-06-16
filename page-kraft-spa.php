@@ -1,4 +1,10 @@
 <?php
+/*
+ * @Author: Emma Forslund - emfo2102 
+ * @Date: 2022-06-16 13:48:33 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-06-16 13:49:20
+ */
 get_header();
 ?>
 <?php
@@ -63,12 +69,12 @@ $wpquery = new WP_Query($arguments);
         ?>
         </div>
         <?php
-            if (is_active_sidebar('offer')) : ?>
-                <?php dynamic_sidebar('offer'); ?>
-    <?php
-            endif;
-    ?>
-        
+        if (is_active_sidebar('offer')) : ?>
+            <?php dynamic_sidebar('offer'); ?>
+        <?php
+        endif;
+        ?>
+
     </section>
 </main>
 <!--Här slutar huvudinnehåll och footer börjar-->

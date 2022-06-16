@@ -1,3 +1,12 @@
+<?php
+/*
+ * @Author: Emma Forslund - emfo2102 
+ * @Date: 2022-06-16 13:47:00 
+ * @Last Modified by:   Emma Forslund - emfo2102 
+ * @Last Modified time: 2022-06-16 13:47:00 
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 

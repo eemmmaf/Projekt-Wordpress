@@ -1,10 +1,18 @@
-<?php 
+<?php
+
+/*
+ * @Author: Emma Forslund - emfo2102 
+ * @Date: 2022-06-16 13:47:17 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-06-16 13:47:38
+ */
+
 get_header();
-    if ( have_posts() ) {
-        while ( have_posts() ) {
-            the_post(); 
-        } // end while
-    } // end if
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+    } // end while
+} // end if
 ?>
 <!--Här slutar huvudinnehåll och footer börjar-->
 <?php get_footer(); ?>
