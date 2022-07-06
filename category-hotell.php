@@ -2,12 +2,20 @@
 /*
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:45:22 
- * @Last Modified by:   Emma Forslund - emfo2102 
- * @Last Modified time: 2022-06-16 13:45:22 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-06-16 16:48:17
  */
 
 get_header();
 ?>
+<div class="big-image">
+    <?php
+    if (is_active_sidebar('image-hotel')) : ?>
+        <?php dynamic_sidebar('image-hotel'); ?>
+    <?php
+    endif;
+    ?>
+</div>
 
 <?php
 //Array
@@ -29,7 +37,7 @@ $wpquery = new WP_Query($arguments);
 ?>
 <section class="page-info">
     <h1><?php single_cat_title(); ?></h1>
-   <p>Här finns information om våra rum balblbal</p>
+    <p>Här finns information om våra rum balblbal</p>
 </section>
 
 <section class="room-section">
