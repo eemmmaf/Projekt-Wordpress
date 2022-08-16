@@ -2,8 +2,8 @@
 /*
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:47:00 
- * @Last Modified by:   Emma Forslund - emfo2102 
- * @Last Modified time: 2022-06-16 13:47:00 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-08-16 14:48:33
  */
 ?>
 
@@ -21,10 +21,7 @@
     <?php
     wp_head();
     ?>
-    <title><?php bloginfo('name')?> | <?php 
-    if(the_title()){the_title();}else{
-        single_cat_title();
-    } ?>
+    <title><?php bloginfo('name') ?> | <?php the_title(); ?>
     </title>
 </head>
 
@@ -32,14 +29,15 @@
     <header>
         <!--Navigering för desktop-->
         <nav class="desktop-nav">
-        <a href="<?php echo get_home_url(); ?>"><img class="logo" src="<?= get_template_directory_uri(); ?>/logo-kraft.svg" alt=""></a>
+            <a href="<?php echo get_home_url(); ?>"><img class="logo" src="<?= get_template_directory_uri(); ?>/logo-kraft.svg" alt=""></a>
             <?php
             wp_nav_menu();
             ?>
         </nav>
         <!--Navigering för mobil-->
         <nav class="mobile-nav">
-        <button class="hamburger-icon" id="hamburger-icon"><i class="fas fa-bars"></i></button>
+            <a href="<?php echo get_home_url(); ?>"><img class="logo" src="<?= get_template_directory_uri(); ?>/logo-kraft.svg" alt=""></a>
+            <button class="hamburger-icon" id="hamburger-icon"><i class="fas fa-bars"></i></button>
             <div class="nav-ul" id="nav-ul">
                 <?php wp_nav_menu(); ?>
             </div>
