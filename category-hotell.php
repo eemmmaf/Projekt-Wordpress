@@ -1,13 +1,14 @@
 <?php
 /*
  * @Author: Emma Forslund - emfo2102 
- * @Date: 2022-06-16 13:45:22 
+ * @Date: 2022-08-16 14:39:30 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-06-16 16:48:17
+ * @Last Modified time: 2022-08-16 14:41:54
  */
 
 get_header();
 ?>
+<!--Stor bild längst upp-->
 <div class="big-image">
     <?php
     if (is_active_sidebar('image-hotel')) : ?>
@@ -18,7 +19,7 @@ get_header();
 </div>
 
 <?php
-//Array
+//Array med kategorins namn
 $arguments = array(
     'category_name' => 'hotell',
 );
@@ -26,22 +27,33 @@ $arguments = array(
 //WP-query
 $wpquery = new WP_Query($arguments);
 ?>
+
+<!--Här börjar huvudinnehållet-->
 <main class="page">
+    <!--Breadcrumbs-->
     <ul class="breadcrumbs">
         <?php
+        //Breadcrumbs placeras dit med YOAST och widget-area
         if (is_active_sidebar('breadcrumbs')) : ?>
             <?php dynamic_sidebar('breadcrumbs'); ?>
     </ul>
 <?php
         endif;
 ?>
+
+<!--Del som beskriver sidan. Skrivs ut från Wordpress-->
 <section class="page-info">
     <h1><?php single_cat_title(); ?></h1>
-    <p>Här finns information om våra rum balblbal</p>
+    <?php
+    echo category_description();
+    ?>
+
 </section>
 
+<!--Sektion där de olika rummen skrivs ut-->
 <section class="room-section">
     <h2>Våra rum</h2>
+
     <!--WP-query-->
     <?php
     if ($wpquery->have_posts()) {
@@ -59,6 +71,7 @@ $wpquery = new WP_Query($arguments);
                     </div>
                     <div class="room-text">
                         <h3><?php the_title(); ?></h3>
+                        <!--Skriver ut förkortad beskrivning av rummet-->
                         <?php the_excerpt(); ?>
                         <!--Länk till hotellrummet-->
                         <a href="<?php the_permalink(); ?>">Läs mer</a>
