@@ -2,13 +2,12 @@
 /*
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:49:02 
- * @Last Modified by:   Emma Forslund - emfo2102 
- * @Last Modified time: 2022-06-16 13:49:02 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-08-16 15:06:50
  */
 
 get_header();
 ?>
-<img class="big-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 <main class="page">
     <ul class="breadcrumbs">
         <?php
@@ -30,7 +29,7 @@ get_header();
             <?php
             //Kontroll för att se om det finns bild
             if (has_post_thumbnail()) {
-                the_post_thumbnail();
+                the_post_thumbnail('medium-page');
             }
             ?>
         </div>
