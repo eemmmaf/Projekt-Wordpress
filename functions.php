@@ -37,16 +37,6 @@ function kraft_widget_init()
     ));
 
     register_sidebar(array(
-        'name' => 'spa-image',
-        'id' => 'spa-image',
-    ));
-
-    register_sidebar(array(
-        'name' => 'image-hotel',
-        'id' => 'image-hotel',
-    ));
-
-    register_sidebar(array(
         'name' => 'offer',
         'id' => 'offer',
         'before_title' => '<h2>',
