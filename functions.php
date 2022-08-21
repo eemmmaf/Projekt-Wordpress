@@ -148,3 +148,5 @@ add_image_size('hotel-room-medium', 720, 400);
 add_image_size('big-header', 1500, 500);
 add_image_size('spa-medium', 400, 300);
 add_image_size('breakfast-big', 750, 500);
+add_image_size('personal-picture', 300, 300);
+
