@@ -3,7 +3,7 @@
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-08-14 21:04:36 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-08-14 21:07:17
+ * @Last Modified time: 2022-08-16 14:52:11
  */
 
 get_header();
@@ -22,7 +22,9 @@ $arguments = array(
 //WP-query
 $wpquery = new WP_Query($arguments);
 ?>
+<!--Här börjar huvudinnehåll-->
 <main class="page">
+    <!--Breadrcumbs-->
     <ul class="breadcrumbs">
         <?php
         if (is_active_sidebar('breadcrumbs')) : ?>
@@ -31,13 +33,19 @@ $wpquery = new WP_Query($arguments);
 <?php
         endif;
 ?>
+
+<!--Sektion med information om kategorin-->
 <section class="page-info">
     <h1><?php single_cat_title(); ?></h1>
-    <p>På denna sida skrivs nyheter om Kraft hotell ut. Missa aldrig det senaste!</p>
+    <?php
+    echo category_description();
+    ?>
 </section>
 
+<!--Sektion med rummen-->
 <section class="room-section">
     <h2>Senaste nytt</h2>
+
     <!--WP-query-->
     <?php
     if ($wpquery->have_posts()) {
@@ -45,6 +53,7 @@ $wpquery = new WP_Query($arguments);
             $wpquery->the_post();
     ?>
             <article>
+                <!--Flex-container där bilden hamnar till vänster om text-->
                 <div class="flex-room-container">
                     <div>
                         <?php
