@@ -3,7 +3,7 @@
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:48:43 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-06-16 15:51:33
+ * @Last Modified time: 2022-08-22 01:30:37
  */
 get_header();
 //Array
@@ -15,15 +15,13 @@ $arguments = array(
 $wpquery = new WP_Query($arguments);
 ?>
 
-<main>
-    <div class="page-breadcrumbs">
+<main class="page-breadcrumbs">
         <!-- Breadcrumbs -->
         <ul class="breadcrumbs">
             <?php
             if (is_active_sidebar('breadcrumbs')) : ?>
                 <?php dynamic_sidebar('breadcrumbs'); ?>
         </ul>
-    </div>
 <?php
             endif;
 ?>
