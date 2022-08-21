@@ -3,7 +3,7 @@
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-08-16 14:39:30 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-08-16 14:41:54
+ * @Last Modified time: 2022-08-16 14:55:35
  */
 
 get_header();
@@ -44,9 +44,11 @@ $wpquery = new WP_Query($arguments);
 <!--Del som beskriver sidan. Skrivs ut från Wordpress-->
 <section class="page-info">
     <h1><?php single_cat_title(); ?></h1>
+    <div>
     <?php
     echo category_description();
     ?>
+    </div>
 
 </section>
 
@@ -74,7 +76,7 @@ $wpquery = new WP_Query($arguments);
                         <!--Skriver ut förkortad beskrivning av rummet-->
                         <?php the_excerpt(); ?>
                         <!--Länk till hotellrummet-->
-                        <a href="<?php the_permalink(); ?>">Läs mer</a>
+                        <a href="<?php the_permalink(); ?>">Läs mer och boka</a>
                     </div>
                 </div>
             </article>

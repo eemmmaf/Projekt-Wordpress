@@ -26,7 +26,7 @@
               <p>076 101 54 74 <br>emfo2102@student.miun.se</p>
           </div>
 
-          <!--Nyhetsbrev och sociala medier-->
+          <!--Nyhetsbrev-->
           <div>
               <h2>Nyhetsbrev</h2>
               <?php
