@@ -4,7 +4,7 @@
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:46:06 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-06-16 15:52:58
+ * @Last Modified time: 2022-08-16 16:28:25
  */
 
 get_header();
@@ -22,8 +22,8 @@ if (have_posts()) {
         </div>
         <main>
             <article class="index-article">
-                <h2>Kraft spahotell</h2>
-                <p>Välkommen till Kraft Spahotell. Här njuter du av spa, behandlingar, restaurangupplevelse och en god natts sömn. </p>
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
             </article>
 
 
@@ -119,14 +119,14 @@ if (have_posts()) {
                     <h2>Följ oss på sociala medier</h2>
                     <div class="social-icons">
                         <ul>
-                    <?php
-                    if (is_active_sidebar('sociala-medier')) : ?>
-                        <?php dynamic_sidebar('sociala-medier'); ?>
-                    <?php
-                    endif;
-                    ?>
-                    </ul>
-                </div>
+                            <?php
+                            if (is_active_sidebar('sociala-medier')) : ?>
+                                <?php dynamic_sidebar('sociala-medier'); ?>
+                            <?php
+                            endif;
+                            ?>
+                        </ul>
+                    </div>
 
                 </div>
             </section>
