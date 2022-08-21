@@ -22,12 +22,11 @@ get_header();
             <?php
             //Kontroll för att se om det finns bild
             if (has_post_thumbnail()) {
-                the_post_thumbnail();
+                the_post_thumbnail('hotel-room-medium');
             }
             ?>
         </div>
     </div>
-    </article>
 </section>
 </main>
 <!--Här slutar huvudinnehåll och footer börjar-->
