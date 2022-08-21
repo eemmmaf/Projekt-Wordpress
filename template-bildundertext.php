@@ -21,6 +21,8 @@ get_header();
 <?php
         endif;
 ?>
+
+<!--Här skrivs innehåll ut-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
     <?php

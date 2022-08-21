@@ -7,6 +7,7 @@
  * @Last Modified time: 2022-07-06 18:45:08
  */
 
+//Oförändrad "the loop" 
 get_header();
 if (have_posts()) {
     while (have_posts()) {

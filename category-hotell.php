@@ -53,6 +53,7 @@ $wpquery = new WP_Query($arguments);
             $wpquery->the_post();
     ?>
             <article>
+                <!-- Flexcontainer -->
                 <div class="flex-room-container">
                     <div>
                         <?php

@@ -22,6 +22,7 @@ add_action('widgets_init', 'kraft_widget_init');
 
 function kraft_widget_init()
 {
+    //Används i footer. Nyhetsbrev
     register_sidebar(array(
         'name' => 'nyhetsbrev',
         'id' => 'nyhetsbrev',
@@ -31,16 +32,13 @@ function kraft_widget_init()
         'after_title' => '</h2>',
     ));
 
+    //Breadcrumbs
     register_sidebar(array(
         'name' => 'breadcrumbs',
         'id' => 'breadcrumbs',
     ));
 
-    register_sidebar(array(
-        'name' => 'hotel-form',
-        'id' => 'hotel-form',
-    ));
-
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'frontpage-info',
         'id' => 'frontpage-info',
@@ -50,6 +48,7 @@ function kraft_widget_init()
         'after-title' => '</h3>'
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'frontpage-ruta2',
         'id' => 'frontpage-ruta2',
@@ -59,6 +58,7 @@ function kraft_widget_init()
         'after-title' => '</h3>'
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'frontpage-ruta3',
         'id' => 'frontpage-ruta3',
@@ -68,6 +68,7 @@ function kraft_widget_init()
         'after-title' => '</h3>'
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'kampanj-ruta1',
         'id' => 'kampanj-ruta1',
@@ -77,6 +78,7 @@ function kraft_widget_init()
         'after-title' => '</h3>'
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'kampanj-ruta2',
         'id' => 'kampanj-ruta2',
@@ -86,16 +88,19 @@ function kraft_widget_init()
         'after-title' => '</h3>'
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'kampanj-text1',
         'id' => 'kampanj-text1',
     ));
 
+    //Används på startsidan
     register_sidebar(array(
         'name' => 'kampanj-text2',
         'id' => 'kampanj-text2',
     ));
 
+    //Sociala medier-widget
     register_sidebar(array(
         'name' => 'sociala-medier',
         'id' => 'sociala-medier',
@@ -130,4 +135,3 @@ add_image_size('big-header', 1500, 500);
 add_image_size('spa-medium', 400, 300);
 add_image_size('breakfast-big', 750, 500);
 add_image_size('personal-picture', 300, 300);
-

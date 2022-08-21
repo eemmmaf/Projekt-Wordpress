@@ -17,6 +17,7 @@ $wpquery = new WP_Query($arguments);
 
 <main>
     <div class="page-breadcrumbs">
+        <!-- Breadcrumbs -->
         <ul class="breadcrumbs">
             <?php
             if (is_active_sidebar('breadcrumbs')) : ?>
@@ -26,6 +27,8 @@ $wpquery = new WP_Query($arguments);
 <?php
             endif;
 ?>
+
+<!--Sektion där kontaktuppgifter finns-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
     <div class="flex">
@@ -46,6 +49,8 @@ $wpquery = new WP_Query($arguments);
         ?>
     </div>
 </section>
+
+<!--Här skrivs information om hotellet ut och en bild från kategorin om-hotellet-->
 <div class="dark-about">
     <?php
     //Array
@@ -81,19 +86,23 @@ $wpquery = new WP_Query($arguments);
     }
     ?>
 </div>
+<!--Flexcontainer-->
 <div class="flex-contact">
     <!--Här infogas ett kontaktformulär-->
     <div class="contact-form">
         <h2>Skriv ett meddelande till oss</h2>
         <?php
-        //Skriver ut ett formulär
+        //Skriver ut ett formulär med shortcode
         echo do_shortcode('[ninja_form id=2]');
         ?>
     </div>
+
+    <!--Sociala medier-->
     <div class="socialmedia">
         <h2>Följ oss på sociala medier</h2>
         <ul>
             <?php
+            //Widget-area
             if (is_active_sidebar('sociala-medier')) : ?>
                 <?php dynamic_sidebar('sociala-medier'); ?>
             <?php
@@ -103,6 +112,8 @@ $wpquery = new WP_Query($arguments);
 
     </div>
 </div>
+
+<!--Sektion där medarbetare skrivs ut från kategorin "personal"-->
 <section class="medarbetare">
     <h2>Våra medarbetare</h2>
     <div class="flex-personal">

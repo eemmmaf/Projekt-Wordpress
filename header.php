@@ -19,8 +19,10 @@
     <link rel="icon" href="<?= get_template_directory_uri(); ?>/images/favicon.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/styles.css">
     <?php
+    //wp_head hook
     wp_head();
     ?>
+    <!--Skriver dynamiskt ut webbplatsens namn och sidans titel-->
     <title><?php bloginfo('name') ?> | <?php the_title(); ?>
     </title>
 </head>
@@ -43,3 +45,4 @@
             </div>
         </nav>
     </header>
+    <!--Här slutar header-->

@@ -8,7 +8,9 @@
 
 get_header();
 ?>
+<!-- Här börjar huvudinnehåll -->
 <main>
+    <!--Breadcrumbs-->
     <div class="page-breadcrumbs">
         <ul class="breadcrumbs">
             <?php
@@ -19,6 +21,8 @@ get_header();
 <?php
             endif;
 ?>
+
+<!--Här skrivs innehåll ut-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
     <div class="flex-container">
@@ -36,36 +40,6 @@ get_header();
             ?>
         </div>
     </div>
-</section>
-<?php
-//Array
-$args = array(
-    'category_name' => 'frukost',
-);
-
-//WP-query
-$wpquery = new WP_Query($args);
-?>
-
-<section class="breakfast-section">
-    <div class="flex-container">
-        <?php
-        if ($wpquery->have_posts()) {
-            while ($wpquery->have_posts()) {
-                $wpquery->the_post();
-        ?>
-                <div class="flex-breakfast">
-                    <h2><?php the_title(); ?></h2>
-                    <?php the_content(); ?>
-                </div>
-                <?php //Kontroll för att se om det finns bild
-                if (has_post_thumbnail()) {
-                    the_post_thumbnail('breakfast-big') ?>
-<?php
-                }
-            }
-        }
-?>
 </section>
 </main>
 <!--Här slutar huvudinnehåll och footer börjar-->

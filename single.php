@@ -1,7 +1,10 @@
 <?php
 get_header();
 ?>
+
+<!--Här skrivs huvudinnehållet ut-->
 <main class="page">
+    <!--Breadcrumbs-->
     <ul class="breadcrumbs">
         <?php
         if (is_active_sidebar('breadcrumbs')) : ?>
@@ -10,6 +13,8 @@ get_header();
 <?php
         endif;
 ?>
+
+<!--Här visas enskild post-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
     <div class="flex-container">

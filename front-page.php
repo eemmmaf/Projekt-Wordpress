@@ -7,12 +7,14 @@
  * @Last Modified time: 2022-08-16 16:28:25
  */
 
+//Loop
 get_header();
 if (have_posts()) {
     while (have_posts()) {
         the_post();
 
 ?>
+        <!--Skriver ut bildspelet på större skärmar-->
         <div class="image-slider"><?php
                                     //Skriver ut bildspelet, visas endast för stora skärmar
                                     echo do_shortcode('[smartslider3 slider="2"]');
@@ -20,16 +22,20 @@ if (have_posts()) {
                             }
                                     ?>
         </div>
+
+        <!--Här börjar huvudinnehållet-->
         <main>
+            <!--Skriver ut text dynamiskt från wordpress-->
             <article class="index-article">
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
             </article>
 
 
-            <!--Här skrivs information om hotellet ut med widgets-->
+            <!--Här skrivs information om hotellet ut med widgets. Används bakgrundsbild med CSS-->
             <section class="news" style="background-image: url('<?= get_template_directory_uri(); ?>/images/background.jpg'); background-repeat: no-repeat; width: 100%; background-size: cover;">
                 <h2>Hotell, spa och restaurang</h2>
+                <!--Flex-container med 3 widgets i-->
                 <div class="flex-widget">
                     <div>
                         <ul>
@@ -65,7 +71,7 @@ if (have_posts()) {
             </section>
 
 
-            <!--Här finns det plats med två kampanjer. Skrivs ut med widgets-->
+            <!--Här finns det plats med två kampanjer. Skrivs ut med widgets. Även två widgets under i varsin widgets-->
             <section class="kampanjer">
                 <h2>Aktuella kampanjer</h2>
                 <div class="flex-kampanjer">
@@ -113,13 +119,14 @@ if (have_posts()) {
 
             </section>
 
-            <!--Sociala medier-->
+            <!--Sociala medier-sektion-->
             <section class="socialmedia-front">
                 <div class="socialmedia">
                     <h2>Följ oss på sociala medier</h2>
                     <div class="social-icons">
                         <ul>
                             <?php
+                            //Widget-area med sociala medier
                             if (is_active_sidebar('sociala-medier')) : ?>
                                 <?php dynamic_sidebar('sociala-medier'); ?>
                             <?php

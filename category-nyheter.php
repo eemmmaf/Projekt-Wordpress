@@ -13,7 +13,7 @@ get_header();
 // Ställer in page-parameter
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-//Array
+//Array med argument för kategorins namn och page
 $arguments = array(
     'category_name' => 'nyheter',
     'paged' => $paged
@@ -62,6 +62,7 @@ $wpquery = new WP_Query($arguments);
                             the_post_thumbnail('hotel-room-small');
                         } ?>
                     </div>
+                    <!--Skriver ut innehåll om rummen. Förkortad post-->
                     <div class="room-text">
                         <h3><?php the_title(); ?></h3>
                         <p> <?= the_time('Y-m-d  H:i'); ?></p>

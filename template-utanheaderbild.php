@@ -14,6 +14,7 @@ Template name: Undersida utan headerbild, med bild till höger om text
 get_header();
 ?>
 <main class="page">
+    <!-- Breadcrumbs-->
     <ul class="breadcrumbs">
         <?php
         if (is_active_sidebar('breadcrumbs')) : ?>
@@ -22,6 +23,7 @@ get_header();
 <?php
         endif;
 ?>
+<!-- Här skrivs innehåll ut-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
     <div class="flex-container">

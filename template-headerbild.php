@@ -12,9 +12,11 @@ Template name: Undersida med header-bild, utan utvald bild
 
 get_header();
 ?>
+<!--Headerbild-->
 <img class="big-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 <main class="page">
     <ul class="breadcrumbs">
+        <!-- Breadcrumbs-->
         <?php
         if (is_active_sidebar('breadcrumbs')) : ?>
             <?php dynamic_sidebar('breadcrumbs'); ?>
@@ -22,6 +24,7 @@ get_header();
 <?php
         endif;
 ?>
+<!--Här skrivs innehåll ut-->
 <section class="page-info">
     <h1><?php the_title(); ?></h1>
             <?php
