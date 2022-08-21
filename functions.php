@@ -37,15 +37,6 @@ function kraft_widget_init()
     ));
 
     register_sidebar(array(
-        'name' => 'offer',
-        'id' => 'offer',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-        'before_widget' => '<div>',
-        'after_widget' => '</div>',
-    ));
-
-    register_sidebar(array(
         'name' => 'hotel-form',
         'id' => 'hotel-form',
     ));
