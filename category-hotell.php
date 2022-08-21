@@ -8,16 +8,6 @@
 
 get_header();
 ?>
-<!--Stor bild längst upp-->
-<div class="big-image">
-    <?php
-    if (is_active_sidebar('image-hotel')) : ?>
-        <?php dynamic_sidebar('image-hotel'); ?>
-    <?php
-    endif;
-    ?>
-</div>
-
 <?php
 //Array med kategorins namn
 $arguments = array(
