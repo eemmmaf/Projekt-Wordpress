@@ -2,7 +2,7 @@
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:44:44 
  * @Last Modified by: Emma Forslund - emfo2102
- * @Last Modified time: 2022-06-16 13:56:59
+ * @Last Modified time: 2022-08-22 00:57:15
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
@@ -46,18 +46,21 @@ h1 {
     color: #372C2E;
     font-family: 'Raleway', sans-serif;
     font-size: 4.0rem;
+    font-weight: 700;
 }
 
 h2 {
     color: #372C2E;
     font-family: 'Raleway', sans-serif;
     font-size: 3.4rem;
+    font-weight: 700;
 }
 
 h3 {
     color: #372C2E;
     font-family: 'Raleway', sans-serif;
     font-size: 2.8rem;
+    font-weight: 700;
 }
 
 h4 {
@@ -78,11 +81,17 @@ h6 {
     font-size: 2rem;
 }
 
-/*Paragrafer*/
-p {
+/*Paragrafer och span*/
+p,
+span {
     color: #372C2E;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important; /* Använder important för att överskrida pluginets style*/
     font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+::marker {
+    color: transparent !important; /* Använder important för att överskrida pluginets style*/
 }
 
 /*Li-element*/
@@ -94,8 +103,8 @@ li {
 
 /*Labels*/
 label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.8rem !important;
 }
 
 a {
@@ -103,13 +112,34 @@ a {
     font-family: 'Roboto', sans-serif;
 }
 
+a:hover {
+    font-weight: 700;
+}
+
+figure img {
+    width: 100%;
+}
+
+form {
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    background-color: #ffffff;
+}
+
 /*Knappar och submit i footer*/
 button,
-#evf-submit-70 {
-    background-color: #DFB753;
-    font-size: 1.8rem;
+#evf-submit-70,
+#evf-submit-166,
+#abc-check-availabilities,
+.abc-submit {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    border: 1px solid #ffffff;
+    background-color: #DFB753 !important; /*Överskrider pluginet style*/
+    font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    font-weight: bold;
+    color: #372C2E !important; /*Överskrider pluginet style*/
 }
 
 /**
@@ -124,8 +154,8 @@ button,
     left: 0;
     margin: 0 auto;
     width: 100%;
-    z-index: 1;
     box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    z-index: 1;
 }
 
 nav {
@@ -135,8 +165,8 @@ nav {
 
 nav a {
     font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    color: white;
+    font-size: 1.6rem;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -156,13 +186,13 @@ nav ul {
 .desktop-nav ul {
     position: absolute;
     top: 2rem;
-    right: 2%;
+    right: 1%;
 }
 
 .desktop-nav li {
     display: inline;
-    margin: 1rem;
-    padding: 0.3rem 2rem;
+    margin: 0rem;
+    padding: 0.3rem 1rem;
 }
 
 .header img {
@@ -172,6 +202,124 @@ nav ul {
 /*Gömmer mobilens navigering för stora skärmar*/
 .mobile-nav {
     display: none;
+}
+
+/*Startisdan*/
+.index-article {
+    max-width: 525px;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 0 2rem 0;
+    text-align: center;
+}
+
+.news ::marker {
+    color: transparent;
+}
+
+.news {
+    padding: 2rem;
+}
+
+.news h2 {
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 2px 1px 2px #FFF6F8;
+    font-size: 4rem;
+}
+
+#pagination {
+    margin-top: 2rem;
+}
+
+#pagination div a {
+    color: #372C2E;
+}
+
+.flex-widget {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 7rem;
+}
+
+.flex-widget div ul {
+    padding: 0;
+}
+
+.flex-widget h3,
+.flex-widget p {
+    margin: 1rem;
+    color: #FFF6F8;
+}
+
+/*Widget-area på startsidan*/
+
+.flex-widget div {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #372c2ee2;
+}
+
+.flex-widget img {
+    margin: 1rem auto;
+}
+
+.flex-widget a {
+    float: right;
+}
+
+.flex-kampanjer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-kampanjer ::marker {
+    color: transparent;
+}
+
+.flex-kampanjer div {
+    max-width: 650px;
+    width: 100%;
+}
+
+.flex-kampanjer ul {
+    padding-left: 0;
+}
+
+.kampanjer h2 {
+    text-align: center;
+}
+
+.kampanjer img {
+    position: relative;
+}
+
+.kampanjer a {
+    padding: 2rem;
+    max-width: 300px;
+    width: 100%;
+    background-color: #FFF6F8;
+}
+
+#kampanj-one a {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+#kampanj-two a {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+
+.wpforms-container-full {
+    max-width: 500px;
+    width: 100% !important; /*Överskrider pluginets style*/
+    margin: 0 !important; /*Överskrider pluginets style*/
 }
 
 /**
@@ -187,15 +335,14 @@ nav ul {
     margin: 3rem auto;
 }
 
+.page {
+    padding: 0 1rem;
+}
+
 .page-breadcrumbs {
     max-width: 1200px;
     width: 100%;
     margin: auto;
-}
-
-.breakfast-section {
-    margin-top: 8rem;
-    background-color: #DFB753;
 }
 
 .big-image {
@@ -205,6 +352,30 @@ nav ul {
 #evf-70-field_3WNV27e5Ba-16,
 #evf-113-field_kj03HNsCiW-6 {
     display: none;
+}
+
+/*Style för kalender-funktionen på boka-restaurang-sidan. Används important pga skriva över pluginets style*/
+
+.ui-datepicker {
+    max-width: 500px !important;
+    width: 100% !important;
+}
+
+.ui-widget-content {
+    border: none !important;
+}
+
+.ui-widget {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+#redi-restaurant-startDate {
+    max-width: 400px;
+    width: 100% !important;
+}
+
+#buttons div button {
+    background-color: #ffffff !important;
 }
 
 /**
@@ -219,7 +390,7 @@ nav ul {
 
 .breadcrumbs {
     padding: 0;
-    margin-top: 8rem;
+    margin-top: 6rem;
     list-style-type: none;
 }
 
@@ -246,9 +417,18 @@ nav ul {
 }
 
 .flex-p {
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
     margin-bottom: 5rem;
+}
+
+.flex-p ul,
+.flex-p ol {
+    padding: 0;
+}
+
+.flex-p li {
+    margin-top: 1rem;
 }
 
 .flex-breakfast {
@@ -259,9 +439,11 @@ nav ul {
 
 .flex-container a,
 .flex-room-container a,
-.spa-section a {
-    padding: 0.5rem 1rem;
-    border: 4px solid #DFB753;
+.spa-section a,
+.flex-widget a,
+.kampanjer a {
+    padding: 1rem;
+    border: 1px solid #DFB753;
     box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
     background-color: #372C2E;
     color: white;
@@ -271,9 +453,11 @@ nav ul {
 .spa-section {
     max-width: 1900px;
     width: 100%;
+    background-color: #ffffff;
 }
 
 .spa-section h2 {
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -288,7 +472,28 @@ nav ul {
     max-width: 450px;
     width: 100%;
     padding: 2%;
+    margin: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
+
+.flex-spa div a {
+    float: right;
+}
+
+.everest-forms {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 2px solid #DFB753;
+
+}
+
+select {
+    color: #372C2E;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.8rem !important;
+}
+
 
 /**
  * Hotellrum-sidan
@@ -319,6 +524,7 @@ nav ul {
     margin-top: 1rem;
 }
 
+
 .flex-room-container a {
     margin-top: 2rem;
     float: right;
@@ -328,6 +534,90 @@ nav ul {
     margin-top: 3rem;
     border-bottom: 0.5px solid #372C2E;
 }
+
+.book-room {
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: #372C2E;
+    border: 3px solid #DFB753;
+}
+
+#evf-form-166 label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #FFF6F8;
+}
+
+.book-room h3 {
+    color: #FFF6F8;
+    text-align: center;
+}
+
+
+.flex div {
+    max-width: 360px;
+    width: 100%;
+    margin: 2rem;
+    text-align: center;
+}
+
+
+/**
+ * Boka hotell-formulär
+ *
+ * 
+ */
+
+.wp-block-abc-shortcodes-booking-form {
+    padding: 1rem;
+}
+
+#abc-form-wrapper {
+    flex: none;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 !important;     /*Överskrider pluginets style*/
+}
+
+#abc-form-wrapper input {
+    max-width: 1000px !important; /*Överskrider pluginets style*/
+    width: 100%;
+}
+
+#abc-form-wrapper label {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.abc-booking-form {
+    margin-top: 1rem;
+}
+
+.abc-booking-form input {
+    margin-bottom: 2rem;
+}
+
+#abc-form-content {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 !important; /*Överskrider pluginets style*/
+}
+
+.abc-column {
+    max-width: 1000px;
+    width: 100% !important; /*Överskrider pluginets style*/
+}
+
+.abc-form-hr {
+    border-bottom: 2px dotted #8e722d !important; /*Överskrider pluginets style*/
+}
+
+#message {
+    max-width: 1000px;
+    width: 100%;
+    height: 200px;
+}
+
 
 /**
  * Om företaget-sidan
@@ -344,11 +634,17 @@ nav ul {
 
 .flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .about-article {
-    max-width: 455px;
+    margin: auto;
+}
+
+.about-article p {
+    max-width: 550px;
 }
 
 .about-article h2,
@@ -358,7 +654,103 @@ nav ul {
 
 .about-flex {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     max-width: 1500px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.about-flex div {
+    margin: 1rem;
+}
+
+.flex article {
+    padding: 1rem 4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    background-color: #ffffff;
+}
+
+.contact-form {
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    background-color: #ffffff;
+}
+
+.flex-contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.flex-contact div {
+    align-items: baseline;
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.flex-contact ::marker {
+    color: #FFF6F8;
+}
+
+.socialmedia {
+    align-self: baseline;
+    margin: 0 0 3rem 0;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    background-color: #ffffff;
+}
+
+.socialmedia h2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.socialmedia li {
+    padding: 3rem;
+}
+
+.social-icons {
+    max-width: 600px;
+    margin: auto;
+}
+
+.flex-personal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.flex-personal div {
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+.medarbetare {
+    margin-top: 2rem;
+    background-color: #ffffff;
+}
+
+.medarbetare h2 {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+
+/*Gör h3-rubrikerna som är i article-element mindre än andra h3. Används på kontakt på om-sidan*/
+article h3 {
+    font-size: 2.2rem;
+}
+
+.offer {
+    max-width: 900px;
     width: 100%;
 }
 
@@ -369,11 +761,13 @@ nav ul {
  */
 
 footer {
-    margin-top: 5rem;
+    margin-top: 6rem;
+    padding: 3rem;
     background-color: #372C2E;
 }
 
 footer h2 {
+    margin-bottom: 0;
     color: white;
     font-size: 2.8rem;
 }
@@ -394,6 +788,27 @@ footer ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+footer form {
+    background-color: #372C2E;
+}
+
+#wpforms-122-field_2 {
+    max-width: 500px;
+    width: 100% !important; /*Överskrider pluginets style med important*/
+}
+
+#wpforms-122-field_2-error {
+    color: #FFF6F8;
+}
+
+.wpforms-required-label {
+    color: #FFF6F8 !important; /*Överskrider pluginets style med important*/
+}
+
+.nf-form-content select.ninja-forms-field {
+    color: #372C2E !important; /*Överskrider pluginets style med important*/
 }
 
 /*Kontakt-formulär för att boka bord*/
@@ -426,8 +841,9 @@ footer label {
     color: white;
 }
 
-/*Media quiries för skärmar som är max 800px breda*/
-@media all and (max-width: 800px) {
+
+/*Media quiries för skärmar som är max 950px breda*/
+@media all and (max-width: 950px) {
 
     /*Gömmer desktop-menyn*/
     .desktop-nav {
@@ -436,47 +852,48 @@ footer label {
 
     /*Hamburger-menyn*/
     .mobile-nav {
-        position: absolute;
-        top: 0.5rem;
-        z-index: 0;
         display: block;
+        position: absolute;
+        top: 0;
+        z-index: 0;
         width: 100%;
         background-color: #372C2E;
     }
 
-    main {
-        margin-top: 5rem;
-    }
-
     /*Ikonen för menyn*/
     .hamburger-icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+        z-index: 1;
         max-width: 50px;
         border: none;
         box-shadow: none;
-        background-color: transparent;
+        background-color: transparent !important; /*Överskrider pluginets style*/
         font-size: 2.8rem;
-        color: #DFB753;
+        color: #DFB753 !important; /*Överskrider pluginets style*/
         cursor: pointer;
     }
 
     .nav-ul {
+        display: none;
         position: relative;
         top: 0;
-        display: none;
         padding-left: 0;
         list-style-type: none;
         background-color: #372C2E;
+        height: 100vh;
+    }
+
+    #menu-top-menu-1 {
+        padding-left: 0;
     }
 
     .nav-ul li {
         display: block;
         z-index: 3;
-        padding: 6%;
+        padding: 4rem;
         border-bottom: 2px solid #DFB753;
         font-size: 1.8rem;
         background-color: #372C2E;
@@ -486,31 +903,178 @@ footer label {
     /*Klassen för länkarna i menyn när dom syns*/
     .nav-ul.show {
         display: block;
-        margin-top: 4rem;
+        margin-top: 1rem;
+        border-top: 1px solid #8e722d;
+    }
+
+    nav a {
+        font-size: 2rem;
     }
 
     .flex-container,
     .flex-spa {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
     }
 
+    .flex-p {
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .flex-container img {
+        max-width: 900px;
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .footer-flex-container div {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #pagination div a {
+        margin-left: 2rem;
+    }
+
     .flex-spa div {
-        max-width: 500px;
+        max-width: 5550px;
         width: 100%;
         margin: 3rem auto;
     }
 
-    main {
-        padding: 2rem;
+    .flex-spa div article {
+        margin: auto;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex div {
+        max-width: 900px;
+        width: 100%;
+        margin: 2rem auto;
     }
 
     .image-slider {
-        position: relative;
-        z-index: 8;
+        display: none;
+    }
+
+    .index-article {
+        padding-top: 1rem;
+    }
+
+}
+
+
+/*Media quiries för skärmar som är max 800px breda*/
+@media all and (max-width: 800px) {
+
+    main {
+        margin-top: 5rem;
+        padding: 1rem;
     }
 
     #n2-ss-2item1 {
-        font-size: 2.5rem !important;
+        font-size: 2.5rem !important; /*Använder important för att överskrida pluginets style*/
+    }
+
+    .breadcrumbs {
+        margin-top: 4rem;
+    }
+
+    .about-flex {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .dark-about {
+        padding: 0;
+    }
+
+    .dark-about p,
+    .dark-about h2 {
+        padding: 0 1rem;
+        margin-top: 0;
+    }
+
+    .big-image {
+        margin-top: 5rem;
+    }
+
+    .page {
+        margin-top: 1rem;
+    }
+
+    .flex-room-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .flex-room-container img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .room-text {
+        margin: 1rem 1rem;
+    }
+
+    .big-image {
+        margin-top: 0;
+    }
+
+    .flex-widget {
+        flex-direction: column;
+    }
+
+    .flex-widget div {
+        max-width: 800px;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .flex-kampanjer {
+        flex-direction: column;
+    }
+
+    .flex-kampanjer div {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    #kampanj-one a {
+        top: 20%;
+    }
+
+    #kampanj-two a {
+        position: absolute;
+        top: 70%;
+    }
+
+    .flex-contact div {
+        max-width: 300px;
+        width: 100%;
+    }
+
+}
+
+/*Media quiries för skärmar som är max 800px breda*/
+@media all and (max-width: 550px) {
+    .social-icons {
+        max-width: 200px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .news h2 {
+        font-size: 3rem;
     }
 }
