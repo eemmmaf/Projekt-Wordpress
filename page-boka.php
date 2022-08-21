@@ -2,8 +2,8 @@
 /*
  * @Author: Emma Forslund - emfo2102 
  * @Date: 2022-06-16 13:48:21 
- * @Last Modified by:   Emma Forslund - emfo2102 
- * @Last Modified time: 2022-06-16 13:48:21 
+ * @Last Modified by: Emma Forslund - emfo2102
+ * @Last Modified time: 2022-08-16 15:07:32
  */
 get_header();
 ?>
@@ -21,13 +21,6 @@ get_header();
     <?php
     the_content();
     ?>
-    <?php
-    //Kontroll för att se om det finns bild
-    if (has_post_thumbnail()) {
-        the_post_thumbnail();
-    }
-    ?>
-    </article>
 </section>
 </main>
 <!--Här slutar huvudinnehåll och footer börjar-->
