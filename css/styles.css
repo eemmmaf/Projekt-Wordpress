@@ -85,13 +85,15 @@ h6 {
 p,
 span {
     color: #372C2E;
-    font-family: 'Roboto', sans-serif !important; /* Använder important för att överskrida pluginets style*/
+    font-family: 'Roboto', sans-serif !important;
+    /* Använder important för att överskrida pluginets style*/
     font-size: 1.8rem;
     line-height: 1.6;
 }
 
 ::marker {
-    color: transparent !important; /* Använder important för att överskrida pluginets style*/
+    color: transparent !important;
+    /* Använder important för att överskrida pluginets style*/
 }
 
 /*Li-element*/
@@ -131,15 +133,27 @@ button,
 #evf-submit-70,
 #evf-submit-166,
 #abc-check-availabilities,
-.abc-submit {
+.abc-submit,
+input [type="submit"] {
     box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
     border: 1px solid #ffffff;
-    background-color: #DFB753 !important; /*Överskrider pluginet style*/
+    background-color: #DFB753 !important;
+    /*Överskrider pluginet style*/
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     font-weight: bold;
-    color: #372C2E !important; /*Överskrider pluginet style*/
+    color: #372C2E !important;
+    /*Överskrider pluginet style*/
+}
+
+/*Hover-effekt*/
+button:hover,
+input [type=submit]:hover,
+.wpforms-submit:hover,
+button [type=submit]:hover {
+    background-color: #372C2E;
+    color: #FFF6F8;
 }
 
 /**
@@ -318,8 +332,10 @@ nav ul {
 
 .wpforms-container-full {
     max-width: 500px;
-    width: 100% !important; /*Överskrider pluginets style*/
-    margin: 0 !important; /*Överskrider pluginets style*/
+    width: 100% !important;
+    /*Överskrider pluginets style*/
+    margin: 0 !important;
+    /*Överskrider pluginets style*/
 }
 
 /**
@@ -576,11 +592,13 @@ select {
     flex: none;
     max-width: 1200px;
     width: 100%;
-    padding: 0 !important;     /*Överskrider pluginets style*/
+    padding: 0 !important;
+    /*Överskrider pluginets style*/
 }
 
 #abc-form-wrapper input {
-    max-width: 1000px !important; /*Överskrider pluginets style*/
+    max-width: 1000px !important;
+    /*Överskrider pluginets style*/
     width: 100%;
 }
 
@@ -600,16 +618,19 @@ select {
 #abc-form-content {
     max-width: 500px;
     width: 100%;
-    margin: 0 !important; /*Överskrider pluginets style*/
+    margin: 0 !important;
+    /*Överskrider pluginets style*/
 }
 
 .abc-column {
     max-width: 1000px;
-    width: 100% !important; /*Överskrider pluginets style*/
+    width: 100% !important;
+    /*Överskrider pluginets style*/
 }
 
 .abc-form-hr {
-    border-bottom: 2px dotted #8e722d !important; /*Överskrider pluginets style*/
+    border-bottom: 2px dotted #8e722d !important;
+    /*Överskrider pluginets style*/
 }
 
 #message {
@@ -796,7 +817,8 @@ footer form {
 
 #wpforms-122-field_2 {
     max-width: 500px;
-    width: 100% !important; /*Överskrider pluginets style med important*/
+    width: 100% !important;
+    /*Överskrider pluginets style med important*/
 }
 
 #wpforms-122-field_2-error {
@@ -804,11 +826,13 @@ footer form {
 }
 
 .wpforms-required-label {
-    color: #FFF6F8 !important; /*Överskrider pluginets style med important*/
+    color: #FFF6F8 !important;
+    /*Överskrider pluginets style med important*/
 }
 
 .nf-form-content select.ninja-forms-field {
-    color: #372C2E !important; /*Överskrider pluginets style med important*/
+    color: #372C2E !important;
+    /*Överskrider pluginets style med important*/
 }
 
 /*Kontakt-formulär för att boka bord*/
@@ -830,11 +854,6 @@ footer form {
 #wpforms-submit-7:hover {
     background-color: #8e722d;
     font-weight: 700;
-}
-
-footer button:hover {
-    background-color: #191815;
-    color: white;
 }
 
 footer label {
@@ -870,9 +889,11 @@ footer label {
         max-width: 50px;
         border: none;
         box-shadow: none;
-        background-color: transparent !important; /*Överskrider pluginets style*/
+        background-color: transparent !important;
+        /*Överskrider pluginets style*/
         font-size: 2.8rem;
-        color: #DFB753 !important; /*Överskrider pluginets style*/
+        color: #DFB753 !important;
+        /*Överskrider pluginets style*/
         cursor: pointer;
     }
 
@@ -983,7 +1004,8 @@ footer label {
     }
 
     #n2-ss-2item1 {
-        font-size: 2.5rem !important; /*Använder important för att överskrida pluginets style*/
+        font-size: 2.5rem !important;
+        /*Använder important för att överskrida pluginets style*/
     }
 
     .about-flex {
@@ -1060,7 +1082,7 @@ footer label {
         width: 100%;
     }
 
-    .big-image{
+    .big-image {
         display: none;
     }
 
